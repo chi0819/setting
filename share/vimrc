@@ -1,0 +1,58 @@
+" line
+set scrolloff=5
+filetype indent on
+set autoindent
+set smartindent
+
+" color
+syntax on
+set t_Co=256
+
+" format
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set ignorecase
+set smartcase
+
+" search
+set hlsearch
+set incsearch
+
+" sound
+set belloff=all
+
+" swap
+set noswapfile
+
+" shortcut
+nnoremap <Space>u <C-r>
+
+
+" Plugin
+filetype plugin indent on
+
+call plug#begin()
+
+Plug 'lervag/vimtex'
+
+call plug#end()
+
+" VimTex
+let g:vimtex_view_method = 'general'
+let g:vimtex_view_general_viewer = 'open'
+let g:vimtex_view_general_options = ''
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_latexmk_engines = {'_': '-xelatex'}
+let g:vimtex_compiler_latexmk = {
+  \ 'build_dir' : '',
+  \ 'executable' : 'latexmk',
+  \ 'options' : [
+  \   '-pdfxe',
+  \   '-shell-escape',
+  \   '-verbose',
+  \   '-file-line-error',
+  \   '-synctex=1',
+  \   '-interaction=nonstopmode',
+  \ ],
+  \}

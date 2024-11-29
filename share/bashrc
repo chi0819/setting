@@ -1,0 +1,4 @@
+alias v="vim"
+alias l="ls"
+alias diff="colordiff"
+. "$HOME/.cargo/env"
