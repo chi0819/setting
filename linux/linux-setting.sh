@@ -28,7 +28,7 @@ sudo apt update
 sudo apt install -y temurin-21-jdk
 
 # Install mill
-curl -L https://github.com/com-lihaoyi/mill/releases/latest/download/mill -o mill && chmod +x mill
+curl -L https://github.com/com-lihaoyi/mill/releases/download/0.10.15/0.10.15 > mill && chmod +x mill
 sudo mv mill /usr/local/bin
 
 # Install firtool
