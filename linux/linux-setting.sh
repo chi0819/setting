@@ -12,12 +12,14 @@ sudo apt update
 sudo apt upgrade
 
 # Install tools by apt
-sudo apt install -y verilator make cmake git vim sbt wget gpg apt-transport-https clang \
-	            build-essential curl
+sudo apt install -y verilator make cmake git vim wget gpg apt-transport-https clang build-essential curl
+
+# Configure git
+git config --global user.email "eric1231.tw@gmail.com"
+git config --global user.name "tzuchilin"
 
 # Install vim plugin
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install OpenJDK
 sudo sh -c 'wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor > /etc/apt/trusted.gpg.d/adoptium.gpg'
