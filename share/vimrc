@@ -1,6 +1,6 @@
 " line
 set scrolloff=5
-filetype indent on
+filetype plugin indent on
 set autoindent
 set smartindent
 
@@ -34,9 +34,13 @@ filetype plugin indent on
 
 call plug#begin()
 
+Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 
 call plug#end()
+
+" rust.vim
+let g:rustfmt_autosave = 1
 
 " VimTex
 let g:vimtex_view_method = 'general'
