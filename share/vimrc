@@ -35,6 +35,7 @@ filetype plugin indent on
 call plug#begin()
 
 Plug 'rust-lang/rust.vim'
+Plug 'gleam-lang/gleam.vim'
 Plug 'lervag/vimtex'
 
 call plug#end()
