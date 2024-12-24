@@ -37,6 +37,7 @@ call plug#begin()
 Plug 'rust-lang/rust.vim'
 Plug 'gleam-lang/gleam.vim'
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
