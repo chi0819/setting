@@ -12,7 +12,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install tools by apt
-sudo apt install -y verilator make cmake git vim wget gpg apt-transport-https clang build-essential curl
+sudo apt install -y verilator tree make cmake vim wget gpg apt-transport-https clang build-essential curl
 
 # Configure git
 git config --global user.email "eric1231.tw@gmail.com"
@@ -37,8 +37,11 @@ tar -xvzf firrtl-bin-linux-x64.tar.gz
 sudo mv firtool-1.95.1/bin/firtool /usr/local/bin
 rm -rf fir*
 
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Install Python Virtual Environment
+sudo apt install -y libssl-dev zlib1g-dev libbz2-dev  \
+  libreadline-dev libsqlite3-dev llvm libncurses5-dev \
+  libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
+curl https://pyenv.run | bash
 
 # Setting environment
 sudo chmod 700 linux-relinking.sh
