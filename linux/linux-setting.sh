@@ -17,6 +17,7 @@ sudo apt install -y verilator tree make cmake vim wget gpg apt-transport-https c
 # Configure git
 git config --global user.email "eric1231.tw@gmail.com"
 git config --global user.name "tzuchilin"
+curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 # Install vim plugin
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
