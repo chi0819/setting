@@ -8,8 +8,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Update & Upgrade Packages Manager
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 
 # Install Tools by apt
 sudo apt install -y verilator tree make cmake vim wget gpg apt-transport-https clang build-essential curl
