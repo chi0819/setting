@@ -38,6 +38,11 @@ tar -xvzf firrtl-bin-linux-x64.tar.gz
 sudo mv firtool-1.95.1/bin/firtool /usr/local/bin
 rm -rf fir*
 
+# Install RISC-V Toolchain
+wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.12.16/riscv32-elf-ubuntu-22.04-gcc-nightly-2024.12.16-nightly.tar.xz
+tar -xvf riscv32-elf-ubuntu-22.04-gcc-nightly-2024.12.16-nightly.tar.xz
+sudo mv riscv/bin/* /usr/local/bin
+
 # Install Python Virtual Environment
 sudo apt install -y libssl-dev zlib1g-dev libbz2-dev  \
   libreadline-dev libsqlite3-dev llvm libncurses5-dev \
