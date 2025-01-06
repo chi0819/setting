@@ -42,6 +42,7 @@ rm -rf fir*
 wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.12.16/riscv32-elf-ubuntu-22.04-gcc-nightly-2024.12.16-nightly.tar.xz
 tar -xvf riscv32-elf-ubuntu-22.04-gcc-nightly-2024.12.16-nightly.tar.xz
 sudo mv riscv/bin/* /usr/local/bin
+rm -rf riscv*
 
 # Install Python Virtual Environment
 sudo apt install -y libssl-dev zlib1g-dev libbz2-dev  \
