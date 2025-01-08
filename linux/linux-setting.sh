@@ -51,6 +51,9 @@ sudo apt install -y libssl-dev zlib1g-dev libbz2-dev  \
 curl https://pyenv.run | bash
 pyenv install 3.12.0
 
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
 # Setting Environment
 sudo chmod 700 linux-relinking.sh
 bash linux-relinking.sh
