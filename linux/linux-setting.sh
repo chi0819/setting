@@ -59,6 +59,11 @@ wget https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6
 sudo apt install ./rustdesk-1.3.6-x86_64.deb
 rm rustdesk-1.3.6-x86_64.deb
 
+# Install Discord
+wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+sudo apt install ./discord.deb
+rm discord.deb
+
 # Setting Environment
 sudo chmod 700 linux-relinking.sh
 bash linux-relinking.sh
