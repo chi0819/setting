@@ -54,6 +54,11 @@ pyenv install 3.12.0
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+# Install RustDesktop
+wget https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6-x86_64.deb
+sudo apt install ./rustdesk-1.3.6-x86_64.deb
+rm rustdesk-1.3.6-x86_64.deb
+
 # Setting Environment
 sudo chmod 700 linux-relinking.sh
 bash linux-relinking.sh
