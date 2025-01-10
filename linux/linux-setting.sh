@@ -32,6 +32,12 @@ sudo apt install -y temurin-21-jdk
 curl -L https://github.com/com-lihaoyi/mill/releases/download/0.10.15/0.10.15 > mill && chmod +x mill
 sudo mv mill /usr/local/bin
 
+# Install sbt
+wget https://github.com/sbt/sbt/releases/download/v1.10.7/sbt-1.10.7.zip
+unzip sbt-1.10.7.zip
+rm -rf sbt*
+mv sbt/bin/sbt /usr/local/bin
+
 # Install Firtool
 wget https://github.com/llvm/circt/releases/download/firtool-1.95.1/firrtl-bin-linux-x64.tar.gz
 tar -xvzf firrtl-bin-linux-x64.tar.gz
