@@ -17,8 +17,11 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 eval "$(/opt/homebrew/bin/brew shellenv)"             # init homebrew    #
 . "$HOME/.cargo/env"                                  # init rust cargo  #
 source ~/.orbstack/shell/init.bash 2>/dev/null || :   # init orbstack    #
+
+export PYENV_ROOT="$HOME/.pyenv"                      # init python virtual environment
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 #################################################
 
 cd ~/Workspace
 source ~/.bashrc
-

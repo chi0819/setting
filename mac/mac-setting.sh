@@ -1,31 +1,39 @@
 #!/bin/bash
 
-# Ask sudo permission
+# Ask sudo Permission
 echo "Enter sudo password: "
 sudo -v
 
-# Keep sudo permission valid
+# Keep sudo Permission Valid
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install tools
-echo "Downloading git-prompt.sh..."
+# Install Tools by Homebrew
+brew install verilator  \
+	     make cmake \
+	     lima pyenv pyenv-virtualenv
+
+# Configure Git
+git config --global user.email "eric1231.tw@gmail.com"
+git config --global user.name "tzuchilin"
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" <<< $'\n'
+# Install Vim Plugin
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "Installing packages from brew_packages.txt..."
-xargs brew install < brew_packages.txt
+# Install SDK Manager
+curl -s "https://get.sdkman.io" | bash
 
-echo "Installing vim plugin"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install OpenJDK
+sdk install java 11.0.21-tem
 
-echo "Installing Rust"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Install sbt
+sdk install sbt
 
-# Setting environment
-sudo chmod 700 mac-relinking.sh
-bash mac-relinking.sh
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+# Setting Environment
+sudo chmod 700 mac-relink.sh
+bash mac-relink.sh
 
 echo "Installation and setup completed!"
