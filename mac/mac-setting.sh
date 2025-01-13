@@ -5,7 +5,7 @@ echo "Enter sudo password: "
 sudo -v
 
 # Keep sudo Permission Valid
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 360; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Tools by Homebrew
 brew install verilator  \
@@ -22,6 +22,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 # Install SDK Manager
 curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Install OpenJDK
 sdk install java 11.0.21-tem
